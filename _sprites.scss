@@ -1,0 +1,181 @@
+.YouTube {
+  background-position: -482px -497px;
+  width: 26px;
+  height: 25px;
+      &:hover {
+      background-position: -508px -497px;
+      width: 26px;
+      height: 25px;
+      }
+}
+.barraHome, #menu-fixo {
+  background-position: 0px -893px;
+  width: 960px;
+  height: 64px;
+}
+.brigadeiro:before {
+  background-position: -783px -545px;
+  width: 143px;
+  height: 99px;
+  margin-top: 55px;
+  margin-bottom:10px;
+}
+.coxinha:before {
+  background-position: -496px -377px;
+  width: 108px;
+  height: 116px;
+  margin-top: 38px;
+  margin-bottom:10px;
+}
+.enviar {
+  background-position: -994px -545px;
+  width: 61px;
+  height: 61px;
+}
+.facebook {
+  background-position: -456px -497px;
+  width: 26px;
+  height: 26px;
+    &:hover {
+    background-position: -376px -497px;
+    width: 26px;
+    height: 26px;
+    }
+}
+.float1 {
+  background-position: 0px 0px;
+  width: 376px;
+  height: 545px;
+}
+.float2 {
+  background-position: -753px 0px;
+  width: 362px;
+  height: 355px;
+}
+.float3 {
+  background-position: 0px -545px;
+  width: 441px;
+  height: 348px;
+}
+.float4 {
+  background-position: -376px 0px;
+  width: 377px;
+  height: 377px;
+}
+.float5 {
+  background-position: -441px -545px;
+  width: 342px;
+  height: 338px;
+}
+.kit:before {
+  background-position: -922px -355px;
+  width: 171px;
+  height: 154px;
+  margin-bottom:10px;
+}
+.making {
+  background-position: -534px -497px;
+  width: 93px;
+  height: 23px;
+}
+.ponto {
+  background-position: -926px -545px;
+  width: 68px;
+  height: 97px;
+}
+.setinhaSobre {
+  background-position: -1093px -381px;
+  width: 12px;
+  height: 5px;
+}
+.bjqs-markers li a {
+  background-position: -1093px -355px;
+  width: 13px;
+  height: 13px;
+}
+.bjqs-markers .active-marker a {
+  background-position: -1093px -368px;
+  width: 14px;
+  height: 13px;
+}
+.tortasDoces:before {
+  background-position: -376px -377px;
+  width: 120px;
+  height: 120px;
+  margin-top: 34px;
+  margin-bottom:10px;
+}
+.tortasSalgadas:before {
+  background-position: -604px -377px;
+  width: 134px;
+  height: 114px;
+  margin-top: 40px;
+  margin-bottom:10px;
+}
+.twitter {
+  background-position: -402px -497px;
+  width: 27px;
+  height: 26px;
+    &:hover {
+    background-position: -429px -497px;
+    width: 27px;
+    height: 26px;
+    }
+}
+
+.mini-brigadeiro:before {
+	background-position: 332px 291px;
+	height: 32px;
+	width: 51px;
+	margin-right: 10px;
+	}
+.mini-coxinha:before {
+	background-position: 276px 291px;
+	height: 43px;
+	width: 41px;
+	margin-right: 20px;
+	}
+.mini-tortasDoces:before {
+	background-position: 173px 291px;
+	height: 42px;
+	width: 42px;
+	margin-right: 19px;
+	}
+.mini-tortasSalgadas:before {
+	background-position: 127px 291px;
+	height: 37px;
+	width: 42px;
+	margin-right: 19px;
+	}
+.mini-kit:before {
+	background-position: 230px 291px;
+	height: 49px;
+	width: 51px;
+	margin-right: 10px;
+	}
+
+.YouTube,
+.barraHome,
+#menu-fixo,
+.brigadeiro:before,
+.coxinha:before,
+.enviar,
+.facebook,
+.float1,
+.float2,
+.float3,
+.float4,
+.float5,
+.kit:before,
+.making,
+.ponto,
+.setinhaSobre,
+.bjqs-markers li a,
+.tortasDoces:before,
+.tortasSalgadas:before,
+.mini-brigadeiro:before,
+.mini-coxinha:before,
+.mini-tortasDoces:before,
+.mini-tortasSalgadas:before,
+.mini-kit:before,
+.twitter {background-image: url(img/spritesheet.png);}

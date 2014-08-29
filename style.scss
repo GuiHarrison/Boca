@@ -1,0 +1,598 @@
+/*
+	Theme Name: Boca do Forno
+	Theme URI: http://GuiHarrison.com
+	Description: Tema personalizado da Boca do Forno
+	Version: 0.2
+	Author: Guilherme Harrison
+	Author URI: http://GuiHarrison.com
+	Tags: Doces, salgados, bolos, tortas
+*/
+
+/*------------------------------------*\
+    SASSES
+\*------------------------------------*/
+
+@mixin indent() {
+		text-indent: 300%;
+		white-space: nowrap;
+		overflow: hidden;
+}
+
+$largura:960px;
+
+$vrede: #9dbf57;
+$laranja: #f09c33;
+$marrom: #413124;
+
+@import "animations";
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+/* global box-sizing */
+*,
+*:after,
+*:before {
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+/* html element 62.5% font-size for REM use */
+
+html {
+	font-size:62.5%;
+}
+body {
+	background: url(img/padraoHome.jpg);
+	font:300 11px/1.4 'open-sans', sans-serif;
+	color:#444;
+}
+/* clear */
+.clear:before,
+.clear:after {
+    content:' ';
+    display:table;
+}
+
+.clear:after {
+    clear:both;
+}
+.clear {
+    *zoom:1;
+}
+img {
+	max-width:100%;
+	vertical-align:bottom;
+}
+a {
+	color:#444;
+	text-decoration:none;
+}
+a:hover {
+	color:#444;
+}
+a:focus {
+	outline:0;
+}
+a:hover,
+a:active {
+	outline:0;
+}
+input:focus {
+	outline:0;
+	border:1px solid #04A4CC;
+}
+
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+
+/* wrapper */
+.wrapper {
+//	height:800px * 4 + 680px;
+	width: 100%;
+	position:absolute;
+}
+
+/* tela */
+
+h1 {
+	text-transform: uppercase;
+	font-family:'open-sans', sans-serif;
+	font-weight: 100;
+	font-size:4em;
+}
+
+.tela {
+	height:800px;
+	width: 100%;
+	padding-top:100px;
+
+}
+
+/* central */
+.central {
+	width:$largura;
+	height:100%;
+	margin:0 auto;
+	position:relative;
+}
+
+/* header */
+.header {
+	display: none;
+	top:-15px;
+	z-index:10;
+	position: fixed;
+	width: 100%;
+
+	#menu-fixo{
+		list-style: none;
+		width: $largura;
+		margin: auto;
+		padding-left: 75px;
+
+		#menu-fixo-paginas{
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+			width: auto;
+			float: left;
+
+			li {
+
+				a {
+					margin-top: 15px;
+					padding: 0 28px;
+					line-height: 30px;
+					font-size: 1.4em;
+				}
+			}
+		}
+
+		#menu-fixo-redes{
+			width: 116px;
+			overflow: hidden;
+			float: right;
+			padding: 0;
+			margin: 16px 0 0 0;
+
+			li{
+				margin-right:10px;
+
+				a {
+					padding: 0;
+					border: none;
+					@include indent;
+				}
+			}
+		}
+	}
+}
+
+/* logo */
+.logo {
+	margin-top:-60px;
+	padding:0 !important;
+
+}
+
+/*  .logo-img:hover {
+	-webkit-animation: bobounce 1s infinite linear;
+	-o-animation: bobounce 1s infinite linear;
+	animation: bobounce 1s infinite linear;
+} */
+
+
+/* sidebar */
+.sidebar {
+
+}
+/* footer */
+.footer {
+
+}
+
+/*------------------------------------*\
+    SPRITES
+\*------------------------------------*/
+
+@import 'sprites';
+
+/*------------------------------------*\
+    PAGES
+\*------------------------------------*/
+
+#home {
+	background: #efebda url(img/padraoHome.jpg) repeat;
+	padding-top: 70px;
+}
+
+//MENU DA HOME
+
+#menu-da-home {
+	font-size:15px;
+}
+	#menu-da-home-paginas, #menu-fixo {
+		margin: 0;
+		padding: 0;
+		li{
+			float:left;
+			padding:10px 0;
+			a {
+				color:white;
+				text-transform:uppercase;
+				padding:0 20px;
+				line-height:44px;
+				display: block;
+				border-right: solid 1px rgba(255,255,255,0.3);
+
+				&:hover {
+					color:$laranja !important;
+				}
+
+				&.item-sem-linha {border-right:none;}
+			}
+		}
+	}
+	#menu-da-home-redes {
+		overflow: auto;
+		display: inline-block;
+		width: 130px;
+		padding: 20px 0 20px 20px;
+		margin: 0;
+		li {
+			float: left;
+			a {
+				display:block;
+				margin-right: 10px;
+				@include indent;
+			}
+		}
+	}
+
+//SLIDER
+
+#slider {
+	margin-top:150px;
+	.bjqs-markers {
+		width:40%;
+		float:right;
+		li a {
+			margin-right: 10px;
+			@include indent;
+		}
+	}
+	.bjqs-wrapper .bjqs .slider a {
+		img {
+			position:absolute;
+		}
+		h2{
+			font-family: 'AlexBrush', script;
+			font-size:5.7em;
+			color:$laranja;
+			letter-spacing: -1px;
+			line-height:55px;
+			margin-bottom:20px;
+			margin:0 0 20px 0;
+		}
+		p{
+			font-size: 15px;
+			color:#846f5d;
+		}
+		h2,p {
+			margin-left:580px;
+		}
+}
+}
+
+// CARDÁPIO
+
+#cardapio {
+	background: $laranja url(img/padraoCardapio.gif) repeat;
+	
+	h1 {
+    color:#FFFFFF;
+	}
+}
+
+#categorias {
+	padding: 0;
+	list-style: none;
+	width:100%;
+	margin: 100px auto;
+	overflow: hidden;
+
+	li {
+	float:left;
+	width:16%;
+	margin:2%;
+
+		a {
+		display: block;
+		text-transform: uppercase;
+		color: #FFF;
+		font-size: 2em;
+		text-align:center;
+
+			&:before {
+			content:"";
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			}
+		}
+	}
+}
+
+#ver-cardapio {
+	display: block;
+	line-height: 50px;
+	margin: auto;
+	width: 300px;
+
+	text-align: center;
+	text-transform: uppercase;
+	color: white;
+	font-size: 1.25em;
+	
+	background-color: $marrom;
+	border-color: $marrom;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+	-webkit-transition: background-color .3s, color .3s;
+	-moz-transition: background-color .3s, color .3s;
+	-ms-transition: background-color .3s, color .3s;
+	-o-transition: background-color .3s, color .3s;
+	transition: background-color .3s, color .3s;
+
+	&:hover{
+		color: $marrom;
+		background-color: $vrede;
+
+		border: 5px solid $marrom;
+		line-height: 40px;
+
+		-webkit-transition: all .3s, color .3s;
+		-moz-transition: all .3s, color .3s;
+		-ms-transition: all .3s, color .3s;
+		-o-transition: all .3s, color .3s;
+		transition: all .3s, color .3s;
+	}
+}
+
+//MAPS
+
+#mapa{
+	height:800px;
+	position: relative;
+
+	#locais {
+		position: absolute;
+		z-index: 100;
+		left: 100px;
+		top: 120px;
+		width: 300px;
+		background-color: #fff;
+		padding: 20px;
+		margin: 0;
+	}
+
+	#innerMapa {
+		height: 680px;
+	}
+
+	img {max-width: inherit;}
+}
+
+.infoBox {  background-color: #FFF; width: 300px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; border: 2px solid #3fa7d8; border-radius: 3px; margin-top: 0 }
+.infoBox p { padding: 0 15px }
+.infoBox:before { background-color: #FFF; border-left: 10px solid transparent; border-right: 10px solid transparent; border-bottom: 10px solid #3fa7d8; top: -10px; content: ""; height: 0; position: absolute; width: 0; left: 138px }
+
+
+/*------------------------------------*\
+    IMAGES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+	TYPOGRAPHY
+\*------------------------------------*/
+
+// @font-face {
+// 	font-family:'Font-Name';
+// 	src:url('fonts/font-name.eot');
+// 	src:url('fonts/font-name.eot?#iefix') format('embedded-opentype'),
+// 		url('fonts/font-name.woff') format('woff'),
+// 		url('fonts/font-name.ttf') format('truetype'),
+// 		url('fonts/font-name.svg#font-name') format('svg');
+//     font-weight:normal;
+//     font-style:normal;
+// }
+
+/*------------------------------------*\
+    RESPONSIVE
+\*------------------------------------*/
+
+@media only screen and (min-width:320px) {
+
+}
+@media only screen and (min-width:480px) {
+
+}
+@media only screen and (min-width:768px) {
+
+}
+@media only screen and (min-width:1024px) {
+
+}
+@media only screen and (min-width:1140px) {
+
+}
+@media only screen and (min-width:1280px) {
+
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+	   only screen and (min-resolution:144dpi) {
+
+}
+
+/*------------------------------------*\
+    MISC
+\*------------------------------------*/
+
+::selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-webkit-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-moz-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+
+/*------------------------------------*\
+    WORDPRESS CORE
+\*------------------------------------*/
+
+.alignnone {
+	margin:5px 20px 20px 0;
+}
+.aligncenter,
+div.aligncenter {
+	display:block;
+	margin:5px auto 5px auto;
+}
+.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+.aligncenter {
+	display:block;
+	margin:5px auto 5px auto;
+}
+a img.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+a img.alignnone {
+	margin:5px 20px 20px 0;
+}
+a img.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.aligncenter {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.wp-caption {
+	background:#FFF;
+	border:1px solid #F0F0F0;
+	max-width:96%;
+	padding:5px 3px 10px;
+	text-align:center;
+}
+.wp-caption.alignnone {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignleft {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignright {
+	margin:5px 0 20px 20px;
+}
+.wp-caption img {
+	border:0 none;
+	height:auto;
+	margin:0;
+	max-width:98.5%;
+	padding:0;
+	width:auto;
+}
+.wp-caption .wp-caption-text,
+.gallery-caption {
+	font-size:11px;
+	line-height:17px;
+	margin:0;
+	padding:0 4px 5px;
+}
+.sticky {
+
+}
+.bypostauthor {
+
+}
+
+/*------------------------------------*\
+    PRINT
+\*------------------------------------*/
+
+@media print {
+	* {
+		background:transparent !important;
+		color:#000 !important;
+		box-shadow:none !important;
+		text-shadow:none !important;
+	}
+	a,
+	a:visited {
+		text-decoration:underline;
+	}
+	a[href]:after {
+		content:" (" attr(href) ")";
+	}
+	abbr[title]:after {
+		content:" (" attr(title) ")";
+	}
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content:"";
+	}
+	pre,blockquote {
+		border:1px solid #999;
+		page-break-inside:avoid;
+	}
+	thead {
+		display:table-header-group;
+	}
+	tr,img {
+		page-break-inside:avoid;
+	}
+	img {
+		max-width:100%;
+	}
+
+	@page {
+		margin:0.5cm;
+	}
+	p,
+	h2,
+	h3 {
+		orphans:3;
+		widows:3;
+	}
+	h2,
+	h3 {
+		page-break-after:avoid;
+	}
+}
