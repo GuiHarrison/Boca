@@ -1,11 +1,11 @@
 var gulp = require('gulp'),
-    jshint = require('gulp-jshint');
     concat = require('gulp-concat');
     browserSync = require('browser-sync');
     sass = require('gulp-sass');
     prefix = require('gulp-autoprefixer');
-	minifyCSS = require('gulp-minify-css');
-//	spritesmith = require('gulp-spritesmith');
+    minifyCSS = require('gulp-minify-css');
+    // jshint = require('gulp-jshint');
+    jslint = require('gulp-jslint');
 
 gulp.task('sass', function () {
     gulp.src('*.scss')
@@ -26,28 +26,36 @@ gulp.task('minify-css', function() {
 		.pipe(gulp.dest('./dist/'))
 });
 
-/*
+/*gulp.task('lint', function() {
+  return gulp.src('assets/*.js')
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'));
+});*/
 
-gulp.task('sprite', function () {
-	var spriteData = gulp.src('img/sprites/*.png').pipe(spritesmith({
-		imgName: 'spritesheet.png',
-		cssName: 'sprites.png'
-	}));
-	
-	spriteData.img.pipe(gulp.dest('img/'));
-	spriteData.css.pipe(gulp.dest('img/'));
+gulp.task('jslint', function () {
+    return gulp.src(['assets/*.js'])
+
+        .pipe(jslint({
+            node: true,
+            evil: true,
+            nomen: true,
+            errorsOnly: false
+        }))
+
+        .on('error', function (error) {
+            console.error(String(error));
+        });
 });
 
-*/
-
 gulp.task('browser-sync', function () {
-	
+
 	var config = {
 		browser: ["google chrome", "firefox"]
 	}
 
 	var files = [
 	'*.php',
+    'assets/*.js',
 	'resources/*',
 	'img/*'
 	]
@@ -60,4 +68,8 @@ gulp.task('browser-sync', function () {
 // Default task to be run with `gulp`
 gulp.task('default', ['sass', 'prefix', 'browser-sync'], function () {
     gulp.watch("*.scss", ['sass']);
+});
+
+gulp.task('js', ['jslint'], function () {
+    gulp.watch("assets/*.js",['jslint']);
 });

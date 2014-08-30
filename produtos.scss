@@ -21,9 +21,9 @@ $marrom: #413124;
 #menu-da-home {
 	position: relative;
 	margin: 50px auto 100px;
-	
+
 	li {
-	
+
 		#item-cardapio {
 			color: $vrede;
 		}
@@ -35,7 +35,7 @@ $marrom: #413124;
 \*------------------------------------*/
 
 #main {
-	
+
 	#sabores {
 		float: left;
 
@@ -96,7 +96,7 @@ $marrom: #413124;
 		clear: both;
 		margin-left: 260px;
 		margin-bottom: 10px;
-		
+
 			&:before {
 				content:'';
 				display: inline-block;
@@ -121,7 +121,7 @@ $marrom: #413124;
 			img {
 				width: 100%;
 			}
-			
+
 			a {
 				font-family: 'open-sans', sans-serif;
 				font-weight: 100;
