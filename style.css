@@ -104,7 +104,8 @@ html {
 body {
   background: url(img/padraoHome.jpg);
   font: 300 11px/1.4 'open-sans', sans-serif;
-  color: #444; }
+  color: #444;
+  font-size: 1.4rem; }
 
 /* clear */
 .clear:before, .clear:after {
@@ -186,8 +187,7 @@ h1 {
       .header #menu-fixo #menu-fixo-paginas li a {
         margin-top: 15px;
         padding: 0 28px;
-        line-height: 30px;
-        font-size: 1.4em; }
+        line-height: 30px; }
     .header #menu-fixo #menu-fixo-redes {
       width: 116px;
       overflow: hidden;
@@ -433,8 +433,7 @@ h1 {
     color: #f09c33;
     letter-spacing: -1px;
     line-height: 55px;
-    margin-bottom: 20px;
-    margin: 0 0 20px 0; }
+    margin: 5px 0 20px 0; }
   #slider .bjqs-wrapper .bjqs .slider a p {
     font-size: 15px;
     color: #846f5d; }
@@ -467,6 +466,35 @@ h1 {
         display: block;
         margin-left: auto;
         margin-right: auto; }
+
+.simpleTabs {
+  display: inline-block;
+  background-color: #fff;
+  width: 380px;
+  height: 465px;
+  border-radius: 10px;
+  padding: 20px; }
+  .simpleTabs .simpleTabsNavigation {
+    padding: 0;
+    margin: 0; }
+    .simpleTabs .simpleTabsNavigation li {
+      margin: 0;
+      display: inline-block; }
+      .simpleTabs .simpleTabsNavigation li a {
+        padding: 0 7px;
+        line-height: 40px;
+        display: block;
+        font-weight: 700;
+        text-transform: uppercase; }
+        .simpleTabs .simpleTabsNavigation li a.current {
+          color: #f09c33; }
+  .simpleTabs .simpleTabsContent {
+    border-top: 1px solid #E0E0E0;
+    padding-top: 20px;
+    display: none;
+    overflow: auto; }
+    .simpleTabs .simpleTabsContent.currentTab {
+      display: block; }
 
 #ver-cardapio {
   display: block;

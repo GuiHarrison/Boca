@@ -161,8 +161,8 @@ function boca_conditional_scripts()
         wp_register_script('abas', get_template_directory_uri() . '/assets/simpletabs_1.3.packed.js', array(), '1.3.0'); // Abas
         wp_enqueue_script('abas'); //Enqueue it!
 
-        wp_register_style('abasEstilo', get_template_directory_uri() . '/assets/simpletabs.css'); // Estilo das abas
-        wp_enqueue_style('abasEstilo'); //Enqueue it!
+        // wp_register_style('abasEstilo', get_template_directory_uri() . '/assets/simpletabs.css'); // Estilo das abas
+        // wp_enqueue_style('abasEstilo'); //Enqueue it!
 
         wp_register_script('infoBox', get_template_directory_uri() . '/assets/infobox_packed.js'); // infoBox
         wp_enqueue_script('infoBox'); //Enqueue it!

@@ -50,6 +50,7 @@ body {
 	background: url(img/padraoHome.jpg);
 	font:300 11px/1.4 'open-sans', sans-serif;
 	color:#444;
+	font-size: 1.4rem;
 }
 /* clear */
 .clear:before,
@@ -149,7 +150,6 @@ h1 {
 					margin-top: 15px;
 					padding: 0 28px;
 					line-height: 30px;
-					font-size: 1.4em;
 				}
 			}
 		}
@@ -277,8 +277,7 @@ h1 {
 			color:$laranja;
 			letter-spacing: -1px;
 			line-height:55px;
-			margin-bottom:20px;
-			margin:0 0 20px 0;
+			margin:5px 0 20px 0;
 		}
 		p{
 			font-size: 15px;
@@ -328,6 +327,63 @@ h1 {
 		}
 	}
 }
+
+// SOBRE
+
+// Abas
+
+// div.simpleTabs
+// ul.simpleTabsNavigation
+// ul.simpleTabsNavigation li
+// ul.simpleTabsNavigation li a
+// ul.simpleTabsNavigation li a:hover
+// ul.simpleTabsNavigation li a.current
+// div.simpleTabsContent
+// div.simpleTabsContent.currentTab
+
+.simpleTabs {
+	display: inline-block;
+	background-color: #fff;
+	width: 380px;
+	height: 465px;
+	border-radius:10px;
+	padding: 20px;
+
+	.simpleTabsNavigation {
+		padding: 0;
+		margin: 0;
+
+		li {
+			margin: 0;
+			display: inline-block;
+
+			a {
+				padding: 0 7px;
+				line-height: 40px;
+				display: block;
+				font-weight: 700;
+				text-transform: uppercase;
+
+				&.current {
+					color:$laranja;
+				}
+
+			}
+		}
+	}
+
+	.simpleTabsContent {
+		border-top: 1px solid  #E0E0E0;
+		padding-top:20px;
+		display: none;
+		overflow: auto;
+
+		&.currentTab {
+			display: block;
+		}
+	}
+}
+
 
 #ver-cardapio {
 	display: block;

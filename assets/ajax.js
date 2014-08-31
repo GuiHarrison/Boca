@@ -5,7 +5,7 @@ $(document).ready(function() {
 		e.preventDefault();
 
 		$('#carregou').remove();
-		$('#main').append('<div id="carregou"></div>');
+		$('body').append('<div id="carregou"></div>');
 
 		var carregando = '<h2>Carregando...</h2>';
 		var aCarregar = $(this).attr('href') + ' .produtos';
@@ -15,4 +15,9 @@ $(document).ready(function() {
 		.load(aCarregar);
 
 	});
+
+	$('body').on('click','#carregou',(function() {
+		$('#carregou').fadeOut('fast').remove();
+	}));
+
 });
