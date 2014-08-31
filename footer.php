@@ -1,16 +1,16 @@
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
-				
+
 				<!-- copyright -->
 				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'boca'); ?> 
+					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'boca'); ?>
 					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//boca.com" title="HTML5 Blank">HTML5 Blank</a>.
 				</p>
 				<!-- /copyright -->
-				
+
 			</footer>
 			<!-- /footer -->
-		
+
 		</div>
 		<!-- /wrapper -->
 
@@ -39,7 +39,7 @@
 			});
 
 
-		<?php if (is_home()) { ?>
+		var isHome = "<?php if (is_home()) { ?>";
 
 		jQuery(document).ready(function($) {
 			$('#slider').bjqs({
@@ -68,7 +68,7 @@
 		});
 
 		/* Single Page */
-		
+
 		jQuery(document)
 		.on('click', 'a[href*="#"]', function(){
 			if(this.hash){
@@ -106,24 +106,24 @@
 				else if (scrolled >= 700)  limpaTudoMenosO ("cardapio") ;
 				else if (scrolled >= 200)  limpaTudoMenosO ("home") ;
 				else jQuery(".header").fadeOut("fast") ;
-				
+
 			});
 
-		<?php }; ?>
+		var closeIf = "<?php }; ?>";
 
-		/* analytics */
+		/* analytics
 		(function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
 		(f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
 		l=i.getElementsByTagName(r)[0];h.async=1;h.src=e;l.parentNode.insertBefore(h,l)
 		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 		ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
-		ga('send', 'pageview');
+		ga('send', 'pageview'); */
 
 		</script>
 
 		<?php if (is_home()) { ?>
 			<script src="/boca/wp-content/themes/boca/assets/mapa.js"></script>
 		<?php } ?>
-	
+
 	</body>
 </html>

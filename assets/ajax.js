@@ -1,28 +1,18 @@
-jQuery(document).ready(function() {
-	
-	var pegou = jQuery(this).attr('href');
-	
-	jQuery("#conteudo .cadaSabor a").click(function(){ 
-		jQuery.ajax({
-			
-			type: 'POST',
+$(document).ready(function() {
 
-			url: $(this).attr('href')+' #main',
+	$('.cadaSabor a').click(function(e) {
 
-			data: {
-			  action: 'pegarSabor',
-			  pegou: pegou,
-			},
+		e.preventDefault();
 
-			success: function(data, textStatus, XMLHttpRequest){
-			  jQuery("#conteudo").html('');
-			  jQuery("#conteudo").append(data);
-			},
+		$('#carregou').remove();
+		$('#main').append('<div id="carregou"></div>');
 
-			error: function(MLHttpRequest, textStatus, errorThrown){
-				alert(errorThrown);
-			}
-			
-		});
+		var carregando = '<h2>Carregando...</h2>';
+		var aCarregar = $(this).attr('href') + ' .produtos';
+
+		$('#carregou')
+		.html(carregando)
+		.load(aCarregar);
+
 	});
 });

@@ -287,14 +287,14 @@ h1 {
 		h2,p {
 			margin-left:580px;
 		}
-}
+	}
 }
 
 // CARDÁPIO
 
 #cardapio {
 	background: $laranja url(img/padraoCardapio.gif) repeat;
-	
+
 	h1 {
     color:#FFFFFF;
 	}
@@ -339,7 +339,7 @@ h1 {
 	text-transform: uppercase;
 	color: white;
 	font-size: 1.25em;
-	
+
 	background-color: $marrom;
 	border-color: $marrom;
 	-webkit-border-radius: 5px;
@@ -440,7 +440,7 @@ h1 {
 
 }
 @media only screen and (-webkit-min-device-pixel-ratio:1.5),
-	   only screen and (min-resolution:144dpi) {
+	   only screen and (min-resolution:144dppx) {
 
 }
 
@@ -449,18 +449,18 @@ h1 {
 \*------------------------------------*/
 
 ::selection {
-	background:#04A4CC;
-	color:#FFF;
+	background:$laranja;
+	color:$marrom;
 	text-shadow:none;
 }
 ::-webkit-selection {
-	background:#04A4CC;
-	color:#FFF;
+	background:$laranja;
+	color:$marrom;
 	text-shadow:none;
 }
 ::-moz-selection {
-	background:#04A4CC;
-	color:#FFF;
+	background:$laranja;
+	color:$marrom;
 	text-shadow:none;
 }
 

@@ -77,7 +77,7 @@ function sliderNaHome() {
             <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
                 <li id="slide-<?php the_ID(); ?>" <?php post_class( 'slide' ); ?>>
-         
+
                     <a href="<?php echo get_post_meta(get_the_ID(), 'my_meta_box_text', true); ?>" target="_blank">
                         <?php the_post_thumbnail('paraSlider'); ?>
                         <h2><?php the_title(); ?></h2>
@@ -103,7 +103,7 @@ function extra() {
     <div id="noticias">
         <ul class="bjqs">
             <?php while ($chamaNoticias->have_posts() ) : $chamaNoticias->the_post(); ?>
-                
+
                 <li id="noticia-<?php the_ID(); ?>" <?php post_class('noticia'); ?>>
                     <?php the_post_thumbnail('paraNoticias'); ?>
                     <h3><?php the_title(); ?></h3>
@@ -129,16 +129,16 @@ function boca_header_scripts()
         // wp_register_script('conditionizr', 'http://cdnjs.cloudflare.com/ajax/libs/conditionizr.js/4.0.0/conditionizr.js', array(), '4.0.0'); // Conditionizr
         // wp_enqueue_script('conditionizr'); // Enqueue it!
 
-        wp_register_script('modernizr', 'http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js', array(), '2.6.2'); // Modernizr
-        wp_enqueue_script('modernizr'); // Enqueue it!
+        // wp_register_script('modernizr', 'http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js', array(), '2.6.2'); // Modernizr
+        // wp_enqueue_script('modernizr'); // Enqueue it!
 
-        wp_register_script('bocascripts', get_template_directory_uri() . '/assets/scripts.js', array(), '1.0.0'); // Custom scripts
-        wp_enqueue_script('bocascripts'); // Enqueue it!
+        // wp_register_script('bocascripts', get_template_directory_uri() . '/assets/scripts.js', array(), '1.0.0'); // Custom scripts
+        // wp_enqueue_script('bocascripts'); // Enqueue it!
 
         wp_register_script('bbq', get_template_directory_uri() . '/assets/jquery.ba-bbq.min.js', array('jquery'), '', true); // BBQ
         wp_enqueue_script('bbq'); //Enqueue it!
-		
-		wp_enqueue_script( 'ajax-implementation.js', get_bloginfo('template_directory') . "/assets/ajax.js", array( 'jquery' ) );
+
+		wp_enqueue_script( 'ajax-implementation.js', get_bloginfo('template_directory') . "/assets/ajax.js", array( 'jquery' ) ); // Carregar ajax para o produto
 		add_action( 'init', 'add_myjavascript' );
 
     }
@@ -151,7 +151,7 @@ function boca_conditional_scripts()
     if (is_home()) {
         wp_register_script('gmaps', 'http://maps.googleapis.com/maps/api/js?sensor=false'); // Google Maps
         wp_enqueue_script('gmaps'); //Enqueue it!
-        
+
         wp_register_script('projetor', get_template_directory_uri() . '/assets/bjqs-1.3.min.js'); // Slider
         wp_enqueue_script('projetor'); // Enqueue it!
 
@@ -166,8 +166,8 @@ function boca_conditional_scripts()
 
         wp_register_script('infoBox', get_template_directory_uri() . '/assets/infobox_packed.js'); // infoBox
         wp_enqueue_script('infoBox'); //Enqueue it!
-    } 
-	
+    }
+
 	else {
 		wp_register_style('produtos', get_template_directory_uri() . '/produtos.css', array(), '1.0.0'); // Conditional style
         wp_enqueue_style('produtos'); // Enqueue it!
