@@ -153,6 +153,32 @@
 	width: 51px;
 	margin-right: 10px;
 	}
+.simpleTabsNavigation li .current:after {
+  background-position: 484px 461px;
+  width: 13px;
+  height: 6px;
+}
+
+.textos h2:before {
+  background-position: 471px 460px;
+  width: 34px;
+  height: 32px;
+}
+
+.bjqs-controls{
+
+  .bjqs-prev a {
+    background-position: 437px 460px;
+    width: 27px;
+    height: 27px;
+  }
+
+  .bjqs-next a {
+    background-position: 411px 460px;
+    width: 27px;
+    height: 27px;
+  }
+}
 
 .YouTube,
 .barraHome,
@@ -178,4 +204,9 @@
 .mini-tortasDoces:before,
 .mini-tortasSalgadas:before,
 .mini-kit:before,
-.twitter {background-image: url(img/spritesheet.png);}
+.twitter,
+.simpleTabsNavigation li .current:after,
+.textos h2:before,
+.bjqs-controls .bjqs-prev a,
+.bjqs-controls .bjqs-next a
+{background-image: url(img/spritesheet.png);}

@@ -273,7 +273,7 @@ h1 {
 		}
 		h2{
 			font-family: 'AlexBrush', script;
-			font-size:5.7em;
+			font-size:6rem;
 			color:$laranja;
 			letter-spacing: -1px;
 			line-height:55px;
@@ -328,63 +328,6 @@ h1 {
 	}
 }
 
-// SOBRE
-
-// Abas
-
-// div.simpleTabs
-// ul.simpleTabsNavigation
-// ul.simpleTabsNavigation li
-// ul.simpleTabsNavigation li a
-// ul.simpleTabsNavigation li a:hover
-// ul.simpleTabsNavigation li a.current
-// div.simpleTabsContent
-// div.simpleTabsContent.currentTab
-
-.simpleTabs {
-	display: inline-block;
-	background-color: #fff;
-	width: 380px;
-	height: 465px;
-	border-radius:10px;
-	padding: 20px;
-
-	.simpleTabsNavigation {
-		padding: 0;
-		margin: 0;
-
-		li {
-			margin: 0;
-			display: inline-block;
-
-			a {
-				padding: 0 7px;
-				line-height: 40px;
-				display: block;
-				font-weight: 700;
-				text-transform: uppercase;
-
-				&.current {
-					color:$laranja;
-				}
-
-			}
-		}
-	}
-
-	.simpleTabsContent {
-		border-top: 1px solid  #E0E0E0;
-		padding-top:20px;
-		display: none;
-		overflow: auto;
-
-		&.currentTab {
-			display: block;
-		}
-	}
-}
-
-
 #ver-cardapio {
 	display: block;
 	line-height: 50px;
@@ -423,21 +366,221 @@ h1 {
 	}
 }
 
-//MAPS
+// SOBRE
+
+#sobre {
+	background-image: url('img/fundoSobre.png');
+	padding-top: 50px;
+	height: 680px;
+}
+
+// Abas
+
+.simpleTabs, .sobreDireita {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.simpleTabs {
+	background-color: #fff;
+	width: 380px;
+	height: 465px;
+	border-radius:10px;
+	padding: 20px;
+
+	.simpleTabsNavigation {
+		padding: 0;
+		margin: 0;
+
+		li {
+			margin: 0;
+			display: inline-block;
+
+			a {
+				position: relative;
+				padding: 0 7px;
+				line-height: 40px;
+				display: block;
+				font-weight: 700;
+				text-transform: uppercase;
+
+				&.current {
+					color:$laranja;
+
+					&:after {
+						content:'';
+						display: block;
+						position: absolute;
+						left: 45%;
+					}
+				}
+
+			}
+		}
+	}
+
+	.simpleTabsContent {
+		border-top: 1px solid  #E0E0E0;
+		padding-top:20px;
+		display: none;
+		overflow: auto;
+
+		&.currentTab {
+			display: block;
+			position: relative;
+		}
+	}
+}
+
+.sobreDireita {
+	margin-left: 20px;
+
+	// instagram
+	.textos {
+		display: block;
+		height: 70px;
+
+		h2 {
+			text-transform: uppercase;
+			font-weight: 100;
+			font-size: 2.5rem;
+			float: left;
+			width: 300px;
+			margin: 10px 0;
+
+			&:before {
+				display: inline-block;
+				margin-bottom: -7px;
+				margin-right: 10px;
+				content: '';
+			}
+		}
+
+		p {
+			font-size: 1.3rem;
+			font-style: italic;
+			width: 250px;
+			float: right;
+		}
+	}
+
+	.si_feed {
+		width: 550px;
+		height: 175px;
+
+		.si_item {
+			width: 123px;
+			height: 123px;
+			margin-right: 19px;
+
+			&:last-child {
+				margin-right: 0px;
+			}
+
+			a {
+
+				img {
+					border-radius: 10px;
+				}
+			}
+		}
+	}
+
+	#noticias {
+
+		.bjqs-wrapper .bjqs .noticias {
+
+			img, h3, p, h6 {
+				display: block;
+				float: left;
+			}
+
+			img {
+				width: 220px;
+				border-radius: 10px;
+			}
+
+			p, h3, h6 {
+				width: 240px;
+				margin-left: 20px;
+				margin-top: 0;
+			}
+
+			h6 {
+				margin-bottom: 10px;
+			}
+
+			h3 {
+				color: $laranja;
+				margin-bottom: 0;
+				text-transform: uppercase;
+			}
+		}
+
+		.bjqs-controls {
+			margin-top: 10px;
+
+			.bjqs-prev, .bjqs-next {
+				float: left;
+
+				a {
+					display: block;
+					margin-left: 10px;
+					@include indent;
+				}
+			}
+		}
+	}
+
+}
+
+//MAPS, MAPA
 
 #mapa{
 	height:800px;
 	position: relative;
+	padding-top: 0;
 
 	#locais {
 		position: absolute;
-		z-index: 100;
+		z-index: 5;
 		left: 100px;
-		top: 120px;
+		top: 0;
+		bottom: 120px;
 		width: 300px;
-		background-color: #fff;
-		padding: 20px;
+		background: url(img/padraoLocal.gif) repeat;
+		padding: 0;
 		margin: 0;
+		list-style-type: none;
+
+		h1 {
+			color: #fff;
+			margin: 10px 20px;
+		}
+
+		li {
+			&:last-child a{
+				border:none !important;
+			}
+
+			a {
+				border-bottom: solid 1px $vrede;
+				display: block;
+				color: #fff;
+				line-height: 40px;
+				width: 100%;
+				padding: 0 20px;
+				text-transform: uppercase;
+
+				&:hover {
+					background-color: $laranja;
+				}
+
+				&.atual {
+					background-color: $vrede;
+				}
+			}
+		}
 	}
 
 	#innerMapa {
@@ -445,12 +588,12 @@ h1 {
 	}
 
 	img {max-width: inherit;}
-}
+
+	}
 
 .infoBox {  background-color: #FFF; width: 300px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; border: 2px solid #3fa7d8; border-radius: 3px; margin-top: 0 }
 .infoBox p { padding: 0 15px }
 .infoBox:before { background-color: #FFF; border-left: 10px solid transparent; border-right: 10px solid transparent; border-bottom: 10px solid #3fa7d8; top: -10px; content: ""; height: 0; position: absolute; width: 0; left: 138px }
-
 
 /*------------------------------------*\
     IMAGES

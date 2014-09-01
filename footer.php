@@ -55,7 +55,7 @@
 		jQuery(document).ready(function($) {
 			$('#noticias').bjqs({
 				'width' : 480,
-				'height' : 160,
+				'height' : 170,
 				'animtype' : 'slide',
 				'animspeed' : 2000,
 				'hoverpause' : true,
@@ -101,12 +101,17 @@
 				}
 
 				if      (scrolled >= 2900) limpaTudoMenosO ("contato") ;
-				else if (scrolled >= 2300) limpaTudoMenosO ("mapa") ;
+				else if (scrolled >= 2180) limpaTudoMenosO ("mapa") ;
 				else if (scrolled >= 1500) limpaTudoMenosO ("sobre") ;
 				else if (scrolled >= 700)  limpaTudoMenosO ("cardapio") ;
 				else if (scrolled >= 200)  limpaTudoMenosO ("home") ;
 				else jQuery(".header").fadeOut("fast") ;
 
+			});
+
+			$("#locais li a").click(function () {
+				$("#locais li a").removeClass('atual');
+				$(this).addClass('atual');
 			});
 
 		var closeIf = "<?php }; ?>";

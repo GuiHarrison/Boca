@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-	
+
 	<!-- blocos -->
 
 	<section id="home" class="tela">
@@ -45,20 +45,25 @@
 	<section class="tela" id="sobre">
 		<div class="central">
 		<h1>Sobre</h1>
-		    <div class="simpleTabs">
-		    	<ul class="simpleTabsNavigation">
+			<div class="simpleTabs">
+				<ul class="simpleTabsNavigation">
 					<li><a href="#">História</a></li>
 					<li><a href="#">Missão</a></li>
 					<li><a href="#">Valores</a></li>
 					<li><a href="#">Princípios</a></li>
 				</ul>
 				<?php $sobre = get_page_by_title("Sobre"); echo apply_filters("the_content", $sobre->post_content); ?>
-		    </div>
+			</div>
 
-			<?php echo do_shortcode('[si_feed tag="bocadoforno" size="small" limit=4]'); ?>
+			<div class="sobreDireita">
 
-			<div class="noticias">
-			<?php extra(); ?>
+				<div class="textos">
+					<h2>#bocadoforno</h2>
+					<p>Participar é simples. Basta postar uma foto no instagram com a hashtag #bocadoforno.</p>
+				</div>
+					<?php echo do_shortcode('[si_feed tag="bocadoforno" size="small" limit=4]'); ?>
+
+				<?php extra(); ?>
 			</div>
 
 		</div>
@@ -67,6 +72,7 @@
 
 	<section class="tela" id="mapa">
 		<ul id="locais">
+		<h1>Lojas</h1>
 			<li><a href="javascript:clicarNoMenu(1);">item 1</a></li>
 			<li><a href="javascript:clicarNoMenu(2);">item 2</a></li>
 			<li><a href="javascript:clicarNoMenu(3);">item 3</a></li>
@@ -85,7 +91,7 @@
 
 			<div class="fb-like-box" data-href="https://www.facebook.com/bocadofornooficial" data-width="380" data-height="480" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="true"></div>
 			<div id="contato"><?php echo FrmFormsController::show_form(6, $key='', $title=true, $description=true); ?></div>
-			
+
 		</div>
 	</section>
 

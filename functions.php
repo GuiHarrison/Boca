@@ -106,8 +106,9 @@ function extra() {
 
                 <li id="noticia-<?php the_ID(); ?>" <?php post_class('noticia'); ?>>
                     <?php the_post_thumbnail('paraNoticias'); ?>
+                    <h6 class="data"><?php echo get_the_date(); ?></h6>
                     <h3><?php the_title(); ?></h3>
-                    <p><?php the_excerpt(); ?></p>
+                    <p><?php the_content(); ?></p>
                 </li>
 
             <?php endwhile; ?>
@@ -116,6 +117,12 @@ function extra() {
     <?php
     }
 }
+
+// function extra_excerpt_length( $length )
+// {
+//     return 18;
+// }
+// add_filter('excerpt_length', 'extra_excerpt_length');
 
 // Load HTML5 Blank scripts (header.php)
 function boca_header_scripts()

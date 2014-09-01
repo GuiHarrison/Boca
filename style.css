@@ -369,7 +369,26 @@ h1 {
   width: 51px;
   margin-right: 10px; }
 
-.YouTube, .barraHome, #menu-fixo, .brigadeiro:before, .coxinha:before, .enviar, .facebook, .float1, .float2, .float3, .float4, .float5, .kit:before, .making, .ponto, .setinhaSobre, .bjqs-markers li a, .tortasDoces:before, .tortasSalgadas:before, .mini-brigadeiro:before, .mini-coxinha:before, .mini-tortasDoces:before, .mini-tortasSalgadas:before, .mini-kit:before, .twitter {
+.simpleTabsNavigation li .current:after {
+  background-position: 484px 461px;
+  width: 13px;
+  height: 6px; }
+
+.textos h2:before {
+  background-position: 471px 460px;
+  width: 34px;
+  height: 32px; }
+
+.bjqs-controls .bjqs-prev a {
+  background-position: 437px 460px;
+  width: 27px;
+  height: 27px; }
+.bjqs-controls .bjqs-next a {
+  background-position: 411px 460px;
+  width: 27px;
+  height: 27px; }
+
+.YouTube, .barraHome, #menu-fixo, .brigadeiro:before, .coxinha:before, .enviar, .facebook, .float1, .float2, .float3, .float4, .float5, .kit:before, .making, .ponto, .setinhaSobre, .bjqs-markers li a, .tortasDoces:before, .tortasSalgadas:before, .mini-brigadeiro:before, .mini-coxinha:before, .mini-tortasDoces:before, .mini-tortasSalgadas:before, .mini-kit:before, .twitter, .simpleTabsNavigation li .current:after, .textos h2:before, .bjqs-controls .bjqs-prev a, .bjqs-controls .bjqs-next a {
   background-image: url(img/spritesheet.png); }
 
 /*------------------------------------*\
@@ -429,7 +448,7 @@ h1 {
     position: absolute; }
   #slider .bjqs-wrapper .bjqs .slider a h2 {
     font-family: 'AlexBrush', script;
-    font-size: 5.7em;
+    font-size: 6rem;
     color: #f09c33;
     letter-spacing: -1px;
     line-height: 55px;
@@ -467,35 +486,6 @@ h1 {
         margin-left: auto;
         margin-right: auto; }
 
-.simpleTabs {
-  display: inline-block;
-  background-color: #fff;
-  width: 380px;
-  height: 465px;
-  border-radius: 10px;
-  padding: 20px; }
-  .simpleTabs .simpleTabsNavigation {
-    padding: 0;
-    margin: 0; }
-    .simpleTabs .simpleTabsNavigation li {
-      margin: 0;
-      display: inline-block; }
-      .simpleTabs .simpleTabsNavigation li a {
-        padding: 0 7px;
-        line-height: 40px;
-        display: block;
-        font-weight: 700;
-        text-transform: uppercase; }
-        .simpleTabs .simpleTabsNavigation li a.current {
-          color: #f09c33; }
-  .simpleTabs .simpleTabsContent {
-    border-top: 1px solid #E0E0E0;
-    padding-top: 20px;
-    display: none;
-    overflow: auto; }
-    .simpleTabs .simpleTabsContent.currentTab {
-      display: block; }
-
 #ver-cardapio {
   display: block;
   line-height: 50px;
@@ -526,18 +516,142 @@ h1 {
     -o-transition: all 0.3s, color 0.3s;
     transition: all 0.3s, color 0.3s; }
 
+#sobre {
+  background-image: url('img/fundoSobre.png');
+  padding-top: 50px;
+  height: 680px; }
+
+.simpleTabs, .sobreDireita {
+  display: inline-block;
+  vertical-align: top; }
+
+.simpleTabs {
+  background-color: #fff;
+  width: 380px;
+  height: 465px;
+  border-radius: 10px;
+  padding: 20px; }
+  .simpleTabs .simpleTabsNavigation {
+    padding: 0;
+    margin: 0; }
+    .simpleTabs .simpleTabsNavigation li {
+      margin: 0;
+      display: inline-block; }
+      .simpleTabs .simpleTabsNavigation li a {
+        position: relative;
+        padding: 0 7px;
+        line-height: 40px;
+        display: block;
+        font-weight: 700;
+        text-transform: uppercase; }
+        .simpleTabs .simpleTabsNavigation li a.current {
+          color: #f09c33; }
+          .simpleTabs .simpleTabsNavigation li a.current:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 45%; }
+  .simpleTabs .simpleTabsContent {
+    border-top: 1px solid #E0E0E0;
+    padding-top: 20px;
+    display: none;
+    overflow: auto; }
+    .simpleTabs .simpleTabsContent.currentTab {
+      display: block;
+      position: relative; }
+
+.sobreDireita {
+  margin-left: 20px; }
+  .sobreDireita .textos {
+    display: block;
+    height: 70px; }
+    .sobreDireita .textos h2 {
+      text-transform: uppercase;
+      font-weight: 100;
+      font-size: 2.5rem;
+      float: left;
+      width: 300px;
+      margin: 10px 0; }
+      .sobreDireita .textos h2:before {
+        display: inline-block;
+        margin-bottom: -7px;
+        margin-right: 10px;
+        content: ''; }
+    .sobreDireita .textos p {
+      font-size: 1.3rem;
+      font-style: italic;
+      width: 250px;
+      float: right; }
+  .sobreDireita .si_feed {
+    width: 550px;
+    height: 175px; }
+    .sobreDireita .si_feed .si_item {
+      width: 123px;
+      height: 123px;
+      margin-right: 19px; }
+      .sobreDireita .si_feed .si_item:last-child {
+        margin-right: 0px; }
+      .sobreDireita .si_feed .si_item a img {
+        border-radius: 10px; }
+  .sobreDireita #noticias .bjqs-wrapper .bjqs .noticias img, .sobreDireita #noticias .bjqs-wrapper .bjqs .noticias h3, .sobreDireita #noticias .bjqs-wrapper .bjqs .noticias p, .sobreDireita #noticias .bjqs-wrapper .bjqs .noticias h6 {
+    display: block;
+    float: left; }
+  .sobreDireita #noticias .bjqs-wrapper .bjqs .noticias img {
+    width: 220px;
+    border-radius: 10px; }
+  .sobreDireita #noticias .bjqs-wrapper .bjqs .noticias p, .sobreDireita #noticias .bjqs-wrapper .bjqs .noticias h3, .sobreDireita #noticias .bjqs-wrapper .bjqs .noticias h6 {
+    width: 240px;
+    margin-left: 20px;
+    margin-top: 0; }
+  .sobreDireita #noticias .bjqs-wrapper .bjqs .noticias h6 {
+    margin-bottom: 10px; }
+  .sobreDireita #noticias .bjqs-wrapper .bjqs .noticias h3 {
+    color: #f09c33;
+    margin-bottom: 0;
+    text-transform: uppercase; }
+  .sobreDireita #noticias .bjqs-controls {
+    margin-top: 10px; }
+    .sobreDireita #noticias .bjqs-controls .bjqs-prev, .sobreDireita #noticias .bjqs-controls .bjqs-next {
+      float: left; }
+      .sobreDireita #noticias .bjqs-controls .bjqs-prev a, .sobreDireita #noticias .bjqs-controls .bjqs-next a {
+        display: block;
+        margin-left: 10px;
+        text-indent: 300%;
+        white-space: nowrap;
+        overflow: hidden; }
+
 #mapa {
   height: 800px;
-  position: relative; }
+  position: relative;
+  padding-top: 0; }
   #mapa #locais {
     position: absolute;
-    z-index: 100;
+    z-index: 5;
     left: 100px;
-    top: 120px;
+    top: 0;
+    bottom: 120px;
     width: 300px;
-    background-color: #fff;
-    padding: 20px;
-    margin: 0; }
+    background: url(img/padraoLocal.gif) repeat;
+    padding: 0;
+    margin: 0;
+    list-style-type: none; }
+    #mapa #locais h1 {
+      color: #fff;
+      margin: 10px 20px; }
+    #mapa #locais li:last-child a {
+      border: none !important; }
+    #mapa #locais li a {
+      border-bottom: solid 1px #9dbf57;
+      display: block;
+      color: #fff;
+      line-height: 40px;
+      width: 100%;
+      padding: 0 20px;
+      text-transform: uppercase; }
+      #mapa #locais li a:hover {
+        background-color: #f09c33; }
+      #mapa #locais li a.atual {
+        background-color: #9dbf57; }
   #mapa #innerMapa {
     height: 680px; }
   #mapa img {
