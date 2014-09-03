@@ -88,9 +88,10 @@
 
 	<section class="tela" id="contato">
 		<div class="central">
+			<h1>Contato</h1>
 
 			<div class="fb-like-box" data-href="https://www.facebook.com/bocadofornooficial" data-width="380" data-height="480" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="true"></div>
-			<div id="contato"><?php echo FrmFormsController::show_form(6, $key='', $title=true, $description=true); ?></div>
+			<div id="formContato"><?php echo FrmFormsController::show_form(6, $key='', $title=true, $description=true); ?></div>
 
 		</div>
 	</section>

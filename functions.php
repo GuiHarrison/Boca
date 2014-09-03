@@ -1,8 +1,8 @@
 <?php
 /*
- *  Author: Todd Motto | @toddmotto
+ *  Author: Guilherme Harrison | @GuiHarrison
  *  URL: boca.com | @boca
- *  Custom functions, support, custom post types and more.
+ *  Funções e funcionalidades do Boca do Forno
  */
 
 /*------------------------------------*\
@@ -117,12 +117,6 @@ function extra() {
     <?php
     }
 }
-
-// function extra_excerpt_length( $length )
-// {
-//     return 18;
-// }
-// add_filter('excerpt_length', 'extra_excerpt_length');
 
 // Load HTML5 Blank scripts (header.php)
 function boca_header_scripts()
