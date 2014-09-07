@@ -3,8 +3,9 @@
 
 				<!-- copyright -->
 				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'boca'); ?>
-					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//boca.com" title="HTML5 Blank">HTML5 Blank</a>.
+					&copy; <?php bloginfo('name'); ?> <?php echo date('Y'); ?>. Todos os direitos reservados.
+
+					<a class="agencia" href="//agenciamaking.com" title="Agência Making">Agência Making</a>
 				</p>
 				<!-- /copyright -->
 
@@ -45,7 +46,7 @@
 			$('#slider').bjqs({
 				'width' : 960,
 				'height' : 400,
-				'animtype' : 'slide',
+				'animtype' : 'fade',
 				'animspeed' : 2000,
 				'hoverpause' : true,
 				'showcontrols' : false

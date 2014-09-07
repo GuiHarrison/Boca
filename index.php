@@ -4,26 +4,26 @@
 
 	<section id="home" class="tela">
 		<div class="central">
-		<nav class="barraHome" id="menu-da-home">
-			<ul id="menu-da-home-paginas">
-				<li><a id="item-home" data-scroll href="#home">Início</a></li>
-				<li><a id="item-cardapio" data-scroll href="#cardapio">Cardápio</a></li>
-				<li><a id="item-sobre" data-scroll href="#sobre">Sobre</a></li>
-				<li><a id="item-mapa" class="item-sem-linha" data-scroll href="#mapa">Lojas</a></li>
-				<li>
-					<a data-scroll class="item-sem-linha logo" href="#home">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo" class="bobounce logo-img">
-					</a>
-				</li>
-				<li><a class="item-contato" data-scroll href="#contato">Trabalhe Conosco</a></li>
-				<li><a class="item-sem-linha item-contato" data-scroll href="#contato">Contato</a></li>
-			</ul>
-			<ul id="menu-da-home-redes">
-				<li><a class="facebook" href="">fb</a></li>
-				<li><a class="twitter" href="">tw</a></li>
-				<li><a class="YouTube" href="">yt</a></li>
-			</ul>
-		</nav>
+			<nav class="barraHome" id="menu-da-home">
+				<ul id="menu-da-home-paginas">
+					<li><a id="item-home" data-scroll href="#home">Início</a></li>
+					<li><a id="item-cardapio" data-scroll href="#cardapio">Cardápio</a></li>
+					<li><a id="item-sobre" data-scroll href="#sobre">Sobre</a></li>
+					<li><a id="item-mapa" class="item-sem-linha" data-scroll href="#mapa">Lojas</a></li>
+					<li>
+						<a data-scroll class="item-sem-linha logo" href="#home">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo" class="bobounce logo-img">
+						</a>
+					</li>
+					<li><a class="item-contato" data-scroll href="#contato">Trabalhe Conosco</a></li>
+					<li><a class="item-sem-linha item-contato" data-scroll href="#contato">Contato</a></li>
+				</ul>
+				<ul id="menu-da-home-redes">
+					<li><a class="facebook" href="">fb</a></li>
+					<li><a class="twitter" href="">tw</a></li>
+					<li><a class="YouTube" href="">yt</a></li>
+				</ul>
+			</nav>
 			<?php sliderNaHome(); ?>
 		</div>
 	</section>
@@ -39,6 +39,10 @@
 				<li class="bobounce"><a class="kit" href="<?php echo get_category_link( 6 ); ?>">Kit festa</a></li>
 			</ul>
 			<a id="ver-cardapio" href="<?php echo get_post_type_archive_link( 'produtos' ); ?>">Ver cardápio completo</a>
+
+			<div class="comidasVoando" id="massaComLimao"></div>
+			<div class="comidasVoando" id="granulos"></div>
+			
 		</div>
 	</section>
 
@@ -66,6 +70,8 @@
 				<?php extra(); ?>
 			</div>
 
+			<div class="comidasVoando" id="tortaComida"></div>
+
 		</div>
 	</section>
 
@@ -83,6 +89,8 @@
 		</ul>
 
 		<div id="innerMapa"></div>
+
+		<div class="comidasVoando" id="nadoSincronizadoDeCoxinhas"></div>
 	</section>
 
 
@@ -91,7 +99,11 @@
 			<h1>Contato</h1>
 
 			<div class="fb-like-box" data-href="https://www.facebook.com/bocadofornooficial" data-width="380" data-height="480" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="true"></div>
-			<div id="formContato"><?php echo FrmFormsController::show_form(6, $key='', $title=true, $description=true); ?></div>
+			<div id="formContato">
+				<?php echo FrmFormsController::show_form(6, $key='', $title=false, $description=true); ?>
+			</div>
+
+			<div class="comidasVoando" id="TresBrigadeirosTristes"></div>
 
 		</div>
 	</section>

@@ -15,9 +15,9 @@
 			<!-- /post thumbnail -->
 
 			<!-- post title -->
-			<h1>
+			<h2>
 				<?php the_title(); ?>
-			</h1>
+			</h2>
 			<!-- /post title -->
 
 			<?php the_content(); // Dynamic Content ?>
@@ -27,8 +27,8 @@
 				$preco = get_post_meta( get_the_ID(), 'preco', true );
 
 				echo "
-					<p><span>Quantidade:</span>$quantidade</p>
-					<p><span>Preço:</span>R$ $preco</p>
+					<p>Quantidade: <span>$quantidade</span></p>
+					<p>Preço: <span>R$ $preco</span></p>
 				";
 			?>
 

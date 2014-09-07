@@ -42,27 +42,27 @@
     height: 26px;
     }
 }
-.float1 {
+#massaComLimao {
   background-position: 0px 0px;
   width: 376px;
   height: 545px;
 }
-.float2 {
+#granulos {
   background-position: -753px 0px;
   width: 362px;
   height: 355px;
 }
-.float3 {
+#tortaComida {
   background-position: 0px -545px;
   width: 441px;
   height: 348px;
 }
-.float4 {
+#nadoSincronizadoDeCoxinhas {
   background-position: -376px 0px;
   width: 377px;
   height: 377px;
 }
-.float5 {
+#TresBrigadeirosTristes {
   background-position: -441px -545px;
   width: 342px;
   height: 338px;
@@ -72,11 +72,6 @@
   width: 171px;
   height: 154px;
   margin-bottom:10px;
-}
-.making {
-  background-position: -534px -497px;
-  width: 93px;
-  height: 23px;
 }
 .ponto {
   background-position: -926px -545px;
@@ -180,6 +175,24 @@
   }
 }
 
+#formContato .frm_submit input {
+  background-position: -994px -544px;
+  background-color: transparent;
+}
+
+.agencia {
+  background-position: -534px -497px;
+  width: 93px;
+  height: 23px;
+}
+
+#menu-fixo:before {
+  background-position: -1030px -666px;
+  width: 34px;
+  height: 36px;
+}
+
+
 .YouTube,
 .barraHome,
 #menu-fixo,
@@ -193,7 +206,6 @@
 .float4,
 .float5,
 .kit:before,
-.making,
 .ponto,
 .setinhaSobre,
 .bjqs-markers li a,
@@ -208,5 +220,9 @@
 .simpleTabsNavigation li .current:after,
 .textos h2:before,
 .bjqs-controls .bjqs-prev a,
-.bjqs-controls .bjqs-next a
-{background-image: url(img/spritesheet.png);}
+.bjqs-controls .bjqs-next a,
+#formContato .frm_submit input,
+.comidasVoando,
+.agencia,
+#menu-fixo:before
+{background-image: url(img/spritesheet.png)}

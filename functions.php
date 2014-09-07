@@ -78,7 +78,7 @@ function sliderNaHome() {
 
                 <li id="slide-<?php the_ID(); ?>" <?php post_class( 'slide' ); ?>>
 
-                    <a href="<?php echo get_post_meta(get_the_ID(), 'my_meta_box_text', true); ?>" target="_blank">
+                    <a href="<?php echo get_post_meta(get_the_ID(), 'my_meta_box_text', true); ?>">
                         <?php the_post_thumbnail('paraSlider'); ?>
                         <h2><?php the_title(); ?></h2>
                         <p><?php the_excerpt(); ?></p>

@@ -26,7 +26,7 @@
 	  var js, fjs = d.getElementsByTagName(s)[0];
 	  if (d.getElementById(id)) return;
 	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/fr_CA/sdk.js#xfbml=1&appId=255552517964135&version=v2.0";
+	  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&appId=255552517964135&version=v2.0";
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
 
@@ -52,8 +52,8 @@
 							</ul>
 
 							<ul id="menu-fixo-redes">
-								<li><a class="facebook" href="">fb</a></li>
-								<li><a class="twitter" href="">tw</a></li>
+								<li><a class="facebook" href="https://pt-br.facebook.com/bocadofornooficial">fb</a></li>
+								<li><a class="twitter" href="https://twitter.com/bocadoforno">tw</a></li>
 								<li><a class="YouTube" href="">yt</a></li>
 							</ul>
 					</nav>
@@ -79,8 +79,8 @@
 								<li><a class="item-sem-linha item-contato" href="<?php echo home_url(); ?>#contato">Contato</a></li>
 							</ul>
 							<ul id="menu-da-home-redes">
-								<li><a class="facebook" href="">fb</a></li>
-								<li><a class="twitter" href="">tw</a></li>
+								<li><a class="facebook" href="https://pt-br.facebook.com/bocadofornooficial">fb</a></li>
+								<li><a class="twitter" href="https://twitter.com/bocadoforno">tw</a></li>
 								<li><a class="YouTube" href="">yt</a></li>
 							</ul>
 					</nav>

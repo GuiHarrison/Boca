@@ -22,7 +22,7 @@ $largura:960px;
 
 $vrede: #9dbf57;
 $laranja: #f09c33;
-$marrom: #413124;
+$marrom: #413124; 
 
 @import "animations";
 
@@ -51,6 +51,7 @@ body {
 	font:300 11px/1.4 'open-sans', sans-serif;
 	color:#444;
 	font-size: 1.4rem;
+	overflow-x: hidden;
 }
 /* clear */
 .clear:before,
@@ -89,6 +90,82 @@ input:focus {
 }
 
 /*------------------------------------*\
+    AJAX
+\*------------------------------------*/
+
+#carregou {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.25);
+	text-align: center;
+	z-index: 10;
+
+
+	&:before {
+		content: '';
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+		margin-right: -0.25em;
+	}
+
+	.produtos {
+		display: inline-block;
+		vertical-align:middle;
+		background-color: #fff;
+		padding: 20px;
+		width: 600px;
+		border-radius:20px;
+		text-align: left;
+		box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+
+		h2{
+			font-family: 'AlexBrush', script;
+			font-size:7rem;
+			color:$laranja;
+			letter-spacing: -1px;
+			margin: 5px 0;
+		}
+
+		span {
+			font-weight: 800;
+		}
+
+		.abrirMapa a {
+			display:block;
+			padding: 15px;
+			border:solid 3px $marrom;
+			border-radius: 5px;
+			color: #fff;
+			text-align: center;
+
+			background-image: -webkit-linear-gradient( $vrede, darken($vrede, 12%));
+			background-image: -o-linear-gradient( $vrede, darken($vrede, 12%));
+			background-image: linear-gradient( $vrede, darken($vrede, 12%));
+
+			&:hover {
+				background-image: -webkit-linear-gradient( darken($vrede, 12%), $vrede );
+				background-image: -o-linear-gradient( darken($vrede, 12%), $vrede );
+				background-image: linear-gradient( darken($vrede, 12%), $vrede );			}
+		}
+	}
+}
+
+#carregando {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	display: block;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+/*------------------------------------*\
     STRUCTURE
 \*------------------------------------*/
 
@@ -96,6 +173,7 @@ input:focus {
 .wrapper {
 //	height:800px * 4 + 680px;
 	width: 100%;
+	min-height: 100%;
 	position:absolute;
 }
 
@@ -127,15 +205,24 @@ h1 {
 .header {
 	display: none;
 	top:-15px;
-	z-index:10;
+	z-index:9;
 	position: fixed;
 	width: 100%;
 
 	#menu-fixo{
+		position: relative;
 		list-style: none;
 		width: $largura;
 		margin: auto;
 		padding-left: 75px;
+
+		&:before {
+			position: absolute;
+			top: 22px;
+			left: 30px;
+			display: block;
+			content: '';
+		}
 
 		#menu-fixo-paginas{
 			overflow: hidden;
@@ -188,13 +275,31 @@ h1 {
 } */
 
 
-/* sidebar */
-.sidebar {
-
-}
 /* footer */
 .footer {
+	background-color: $marrom;
+	width: 100%;
+	color: #fff;
+	padding:20px;
+	overflow: hidden;
 
+	p {
+		width: 960px;
+		margin: auto;
+
+		.agencia {
+			display: block;
+			width: 93px;
+			height: 23px;
+
+			float: right;
+			text-align: right;
+			color: #fff;
+			font-weight: 600;
+
+			@include indent;
+		}
+	}
 }
 
 /*------------------------------------*\
@@ -259,6 +364,7 @@ h1 {
 
 #slider {
 	margin-top:150px;
+
 	.bjqs-markers {
 		width:40%;
 		float:right;
@@ -267,7 +373,9 @@ h1 {
 			@include indent;
 		}
 	}
-	.bjqs-wrapper .bjqs .slider a {
+
+	.bjqs .slider a {
+
 		img {
 			position:absolute;
 		}
@@ -625,9 +733,9 @@ h1 {
 	}
 
 	img {
-
 		&:first-child {
 			position: absolute !important;
+			border-radius: 10px;
 			top: 0;
 			right: 0;
 		}
@@ -651,17 +759,85 @@ h1 {
 	display: inline-block;
 	vertical-align: top;
 	background-color: #fff;
+	width: 380px;
 }
 
 #formContato {
-	background-color: $marrom;
+	background-color: #857b74;
 	width: 560px;
+	height: 480px;
+	margin-left: 15px;
+	padding: 20px;
+	border-radius: 20px;
+
+	label{
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 2rem;
+	}
+
+	.frm_required {
+		display: none;
+	}
+
+	input, textarea {
+		font-size: 2rem;
+		line-height: 3rem;
+		border-radius: 0;
+		background-color: #f1eddc;
+	}
+
+	p {
+		color: #fff;
+		float: left;
+	}
+
+	.frm_submit {
+		float: right;
+
+		input {
+			@include indent;
+			width: 62px;
+			height: 63px;
+			border: none;
+		}
+	}
 }
 
 /*------------------------------------*\
     IMAGES
 \*------------------------------------*/
 
+.comidasVoando {
+	position: absolute;
+	pointer-events:none;
+}
+
+#massaComLimao {
+	top: -50px;
+	right: -350px;
+}
+
+#granulos {
+	bottom: -100px;
+	left: -200px;
+}
+
+#tortaComida {
+	bottom: 0;
+	right: -300px;
+}
+
+#nadoSincronizadoDeCoxinhas {
+	bottom: 100px;
+	right: -100px;
+	z-index: 10;
+}
+
+#TresBrigadeirosTristes {
+	top: -100px;
+	right: -250px;
+}
 
 
 /*------------------------------------*\

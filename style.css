@@ -105,7 +105,8 @@ body {
   background: url(img/padraoHome.jpg);
   font: 300 11px/1.4 'open-sans', sans-serif;
   color: #444;
-  font-size: 1.4rem; }
+  font-size: 1.4rem;
+  overflow-x: hidden; }
 
 /* clear */
 .clear:before, .clear:after {
@@ -140,11 +141,71 @@ input:focus {
   border: 1px solid #04A4CC; }
 
 /*------------------------------------*\
+    AJAX
+\*------------------------------------*/
+#carregou {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  text-align: center;
+  z-index: 10; }
+  #carregou:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; }
+  #carregou .produtos {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #fff;
+    padding: 20px;
+    width: 600px;
+    border-radius: 20px;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); }
+    #carregou .produtos h2 {
+      font-family: 'AlexBrush', script;
+      font-size: 7rem;
+      color: #f09c33;
+      letter-spacing: -1px;
+      margin: 5px 0; }
+    #carregou .produtos span {
+      font-weight: 800; }
+    #carregou .produtos .abrirMapa a {
+      display: block;
+      padding: 15px;
+      border: solid 3px #413124;
+      border-radius: 5px;
+      color: #fff;
+      text-align: center;
+      background-image: -webkit-linear-gradient(#9dbf57, #7e9d3c);
+      background-image: -o-linear-gradient(#9dbf57, #7e9d3c);
+      background-image: linear-gradient(#9dbf57, #7e9d3c); }
+      #carregou .produtos .abrirMapa a:hover {
+        background-image: -webkit-linear-gradient(#7e9d3c, #9dbf57);
+        background-image: -o-linear-gradient(#7e9d3c, #9dbf57);
+        background-image: linear-gradient(#7e9d3c, #9dbf57); }
+
+#carregando {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px; }
+
+/*------------------------------------*\
     STRUCTURE
 \*------------------------------------*/
 /* wrapper */
 .wrapper {
   width: 100%;
+  min-height: 100%;
   position: absolute; }
 
 /* tela */
@@ -170,14 +231,21 @@ h1 {
 .header {
   display: none;
   top: -15px;
-  z-index: 10;
+  z-index: 9;
   position: fixed;
   width: 100%; }
   .header #menu-fixo {
+    position: relative;
     list-style: none;
     width: 960px;
     margin: auto;
     padding-left: 75px; }
+    .header #menu-fixo:before {
+      position: absolute;
+      top: 22px;
+      left: 30px;
+      display: block;
+      content: ''; }
     .header #menu-fixo #menu-fixo-paginas {
       overflow: hidden;
       margin: 0;
@@ -213,8 +281,28 @@ h1 {
 	-o-animation: bobounce 1s infinite linear;
 	animation: bobounce 1s infinite linear;
 } */
-/* sidebar */
 /* footer */
+.footer {
+  background-color: #413124;
+  width: 100%;
+  color: #fff;
+  padding: 20px;
+  overflow: hidden; }
+  .footer p {
+    width: 960px;
+    margin: auto; }
+    .footer p .agencia {
+      display: block;
+      width: 93px;
+      height: 23px;
+      float: right;
+      text-align: right;
+      color: #fff;
+      font-weight: 600;
+      text-indent: 300%;
+      white-space: nowrap;
+      overflow: hidden; }
+
 /*------------------------------------*\
     SPRITES
 \*------------------------------------*/
@@ -260,27 +348,27 @@ h1 {
     width: 26px;
     height: 26px; }
 
-.float1 {
+#massaComLimao {
   background-position: 0px 0px;
   width: 376px;
   height: 545px; }
 
-.float2 {
+#granulos {
   background-position: -753px 0px;
   width: 362px;
   height: 355px; }
 
-.float3 {
+#tortaComida {
   background-position: 0px -545px;
   width: 441px;
   height: 348px; }
 
-.float4 {
+#nadoSincronizadoDeCoxinhas {
   background-position: -376px 0px;
   width: 377px;
   height: 377px; }
 
-.float5 {
+#TresBrigadeirosTristes {
   background-position: -441px -545px;
   width: 342px;
   height: 338px; }
@@ -290,11 +378,6 @@ h1 {
   width: 171px;
   height: 154px;
   margin-bottom: 10px; }
-
-.making {
-  background-position: -534px -497px;
-  width: 93px;
-  height: 23px; }
 
 .ponto {
   background-position: -926px -545px;
@@ -388,7 +471,21 @@ h1 {
   width: 27px;
   height: 27px; }
 
-.YouTube, .barraHome, #menu-fixo, .brigadeiro:before, .coxinha:before, .enviar, .facebook, .float1, .float2, .float3, .float4, .float5, .kit:before, .making, .ponto, .setinhaSobre, .bjqs-markers li a, .tortasDoces:before, .tortasSalgadas:before, .mini-brigadeiro:before, .mini-coxinha:before, .mini-tortasDoces:before, .mini-tortasSalgadas:before, .mini-kit:before, .twitter, .simpleTabsNavigation li .current:after, .textos h2:before, .bjqs-controls .bjqs-prev a, .bjqs-controls .bjqs-next a {
+#formContato .frm_submit input {
+  background-position: -994px -544px;
+  background-color: transparent; }
+
+.agencia {
+  background-position: -534px -497px;
+  width: 93px;
+  height: 23px; }
+
+#menu-fixo:before {
+  background-position: -1030px -666px;
+  width: 34px;
+  height: 36px; }
+
+.YouTube, .barraHome, #menu-fixo, .brigadeiro:before, .coxinha:before, .enviar, .facebook, .float1, .float2, .float3, .float4, .float5, .kit:before, .ponto, .setinhaSobre, .bjqs-markers li a, .tortasDoces:before, .tortasSalgadas:before, .mini-brigadeiro:before, .mini-coxinha:before, .mini-tortasDoces:before, .mini-tortasSalgadas:before, .mini-kit:before, .twitter, .simpleTabsNavigation li .current:after, .textos h2:before, .bjqs-controls .bjqs-prev a, .bjqs-controls .bjqs-next a, #formContato .frm_submit input, .comidasVoando, .agencia, #menu-fixo:before {
   background-image: url(img/spritesheet.png); }
 
 /*------------------------------------*\
@@ -444,19 +541,19 @@ h1 {
       text-indent: 300%;
       white-space: nowrap;
       overflow: hidden; }
-  #slider .bjqs-wrapper .bjqs .slider a img {
+  #slider .bjqs .slider a img {
     position: absolute; }
-  #slider .bjqs-wrapper .bjqs .slider a h2 {
+  #slider .bjqs .slider a h2 {
     font-family: 'AlexBrush', script;
     font-size: 6rem;
     color: #f09c33;
     letter-spacing: -1px;
     line-height: 55px;
     margin: 5px 0 20px 0; }
-  #slider .bjqs-wrapper .bjqs .slider a p {
+  #slider .bjqs .slider a p {
     font-size: 15px;
     color: #846f5d; }
-  #slider .bjqs-wrapper .bjqs .slider a h2, #slider .bjqs-wrapper .bjqs .slider a p {
+  #slider .bjqs .slider a h2, #slider .bjqs .slider a p {
     margin-left: 580px; }
 
 #cardapio {
@@ -681,6 +778,7 @@ h1 {
     color: #9dbf57; }
   .infoBox img:first-child {
     position: absolute !important;
+    border-radius: 10px;
     top: 0;
     right: 0; }
   .infoBox h3 {
@@ -694,15 +792,68 @@ h1 {
 .fb-like-box, #formContato {
   display: inline-block;
   vertical-align: top;
-  background-color: #fff; }
+  background-color: #fff;
+  width: 380px; }
 
 #formContato {
-  background-color: #413124;
-  width: 560px; }
+  background-color: #857b74;
+  width: 560px;
+  height: 480px;
+  margin-left: 15px;
+  padding: 20px;
+  border-radius: 20px; }
+  #formContato label {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2rem; }
+  #formContato .frm_required {
+    display: none; }
+  #formContato input, #formContato textarea {
+    font-size: 2rem;
+    line-height: 3rem;
+    border-radius: 0;
+    background-color: #f1eddc; }
+  #formContato p {
+    color: #fff;
+    float: left; }
+  #formContato .frm_submit {
+    float: right; }
+    #formContato .frm_submit input {
+      text-indent: 300%;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 62px;
+      height: 63px;
+      border: none; }
 
 /*------------------------------------*\
     IMAGES
 \*------------------------------------*/
+.comidasVoando {
+  position: absolute;
+  pointer-events: none; }
+
+#massaComLimao {
+  top: -50px;
+  right: -350px; }
+
+#granulos {
+  bottom: -100px;
+  left: -200px; }
+
+#tortaComida {
+  bottom: 0;
+  right: -300px; }
+
+#nadoSincronizadoDeCoxinhas {
+  bottom: 100px;
+  right: -100px;
+  z-index: 10; }
+
+#TresBrigadeirosTristes {
+  top: -100px;
+  right: -250px; }
+
 /*------------------------------------*\
 	TYPOGRAPHY
 \*------------------------------------*/
