@@ -189,7 +189,6 @@ h1 {
 .tela {
 	height:800px;
 	width: 100%;
-	padding-top:100px;
 
 }
 
@@ -282,6 +281,8 @@ h1 {
 	color: #fff;
 	padding:20px;
 	overflow: hidden;
+	position: absolute;
+	bottom: 0;
 
 	p {
 		width: 960px;
