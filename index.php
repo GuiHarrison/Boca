@@ -79,20 +79,13 @@
 	<section class="tela" id="mapa">
 		<ul id="locais">
 		<h1>Lojas</h1>
-			<li><a href="javascript:clicarNoMenu(1);">Gutierrez</a></li>
-			<li><a href="javascript:clicarNoMenu(2);">Barro Preto</a></li>
-			<li><a href="javascript:clicarNoMenu(3);">Buritis</a></li>
-			<li><a href="javascript:clicarNoMenu(4);">Sion - Pça Nova York</a></li>
-			<li><a href="javascript:clicarNoMenu(5);">Mangabeiras</a></li>
-			<li><a href="javascript:clicarNoMenu(6);">Puc - Coração Eucarístico</a></li>
-			<li><a href="javascript:clicarNoMenu(7);">Lourdes</a></li>
-			<li><a href="javascript:clicarNoMenu(8);">Savassi</a></li>
-			<li><a href="javascript:clicarNoMenu(9);">Coração Eucarístico</a></li>
-			<li><a href="javascript:clicarNoMenu(10);">Cidade Nova</a></li>
-			<li><a href="javascript:clicarNoMenu(11);">Sion - Pça Alaska</a></li>
-			<li><a href="javascript:clicarNoMenu(12);">Pampulha</a></li>
-			<li><a href="javascript:clicarNoMenu(13);">Cidade Jardim</a></li>
-			<li><a href="javascript:clicarNoMenu(14);">São Bento</a></li>
+			<li><a href="javascript:clicarNoMenu(1);">item 1</a></li>
+			<li><a href="javascript:clicarNoMenu(2);">item 2</a></li>
+			<li><a href="javascript:clicarNoMenu(3);">item 3</a></li>
+			<li><a href="javascript:clicarNoMenu(4);">item 4</a></li>
+			<li><a href="javascript:clicarNoMenu(5);">item 5</a></li>
+			<li><a href="javascript:clicarNoMenu(6);">item 6</a></li>
+			<li><a href="javascript:clicarNoMenu(7);">item 7</a></li>
 		</ul>
 
 		<div id="innerMapa"></div>

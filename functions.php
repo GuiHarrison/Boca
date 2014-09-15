@@ -127,6 +127,15 @@ function boca_header_scripts()
         wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', array(), '1.9.1'); // Google CDN jQuery
         wp_enqueue_script('jquery'); // Enqueue it!
 
+        // wp_register_script('conditionizr', 'http://cdnjs.cloudflare.com/ajax/libs/conditionizr.js/4.0.0/conditionizr.js', array(), '4.0.0'); // Conditionizr
+        // wp_enqueue_script('conditionizr'); // Enqueue it!
+
+        // wp_register_script('modernizr', 'http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js', array(), '2.6.2'); // Modernizr
+        // wp_enqueue_script('modernizr'); // Enqueue it!
+
+        // wp_register_script('bocascripts', get_template_directory_uri() . '/assets/scripts.js', array(), '1.0.0'); // Custom scripts
+        // wp_enqueue_script('bocascripts'); // Enqueue it!
+
         wp_register_script('bbq', get_template_directory_uri() . '/assets/jquery.ba-bbq.min.js', array('jquery'), '', true); // BBQ
         wp_enqueue_script('bbq'); //Enqueue it!
 
@@ -152,6 +161,9 @@ function boca_conditional_scripts()
 
         wp_register_script('abas', get_template_directory_uri() . '/assets/simpletabs_1.3.packed.js', array(), '1.3.0'); // Abas
         wp_enqueue_script('abas'); //Enqueue it!
+
+        // wp_register_style('abasEstilo', get_template_directory_uri() . '/assets/simpletabs.css'); // Estilo das abas
+        // wp_enqueue_style('abasEstilo'); //Enqueue it!
 
         wp_register_script('infoBox', get_template_directory_uri() . '/assets/infobox_packed.js'); // infoBox
         wp_enqueue_script('infoBox'); //Enqueue it!

@@ -217,7 +217,8 @@ h1 {
 
 .tela {
   height: 800px;
-  width: 100%; }
+  width: 100%;
+  padding-top: 100px; }
 
 /* central */
 .central {
@@ -286,9 +287,7 @@ h1 {
   width: 100%;
   color: #fff;
   padding: 20px;
-  overflow: hidden;
-  position: absolute;
-  bottom: 0; }
+  overflow: hidden; }
   .footer p {
     width: 960px;
     margin: auto; }
